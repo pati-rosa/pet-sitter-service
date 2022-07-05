@@ -1,9 +1,8 @@
 const uploadVideo = async (req, res) => {
   try {
-    const { nome, site } = req.body;
-    res.json({ nome, site });
+    res.send({ message: "Upload realizado com sucesso" });
   } catch (error) {
-    return res.status(400).send({ error: "List Videos" });
+    return res.status(400).send({ error: "Error on upload photo" });
   }
 };
 
