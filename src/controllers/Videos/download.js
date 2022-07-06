@@ -1,6 +1,7 @@
 const downloadVideo = async (req, res) => {
+  console.log("BANANA", req.params.id);
   try {
-    res.download(`./src/uploads/${req.params.id}`, "video.mp4", function (err) {
+    res.download(`./src/uploads/${req.params.id}`, function (err) {
       if (err) {
         console.log(err);
       } else {
